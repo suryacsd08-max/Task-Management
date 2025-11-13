@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1a237e, #283593, #3949ab);
+  height: 100vh;
+}
+
+/* Center container */
+.signup-container {
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Card styling */
+.signup-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 40px 50px;
+  width: 380px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+.signup-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Input groups */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+  color: #e3e3e3;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: #ddd;
+}
+
+.input-group input:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px rgba(41, 98, 255, 0.8);
+}
+
+/* Button */
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #2979ff, #3d5afe);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signup-btn:hover {
+  background: linear-gradient(90deg, #1e88e5, #303f9f);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(33, 150, 243, 0.4);
+}
+
+/* Messages */
+.error-message {
+  background-color: rgba(255, 0, 0, 0.15);
+  color: #ffbaba;
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.success-message {
+  background-color: rgba(0, 255, 0, 0.15);
+  color: #a5f7a5;
+  border: 1px solid rgba(0, 255, 0, 0.4);
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Login link */
+.login-text {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.login-link {
+  color: #64b5f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+  color: #90caf9;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
