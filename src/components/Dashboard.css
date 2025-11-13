@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1a237e, #283593, #3949ab);
+  height: 100vh;
+  color: white;
+}
+
+.dashboard-container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.dashboard-header h2 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.logout-btn {
+  background: #ff5252;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #e53935;
+  transform: scale(1.05);
+}
+
+/* Task Input Section */
+.task-input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-input-section input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 15px;
+}
+
+.task-input-section input::placeholder {
+  color: #ddd;
+}
+
+.task-input-section button {
+  background: linear-gradient(90deg, #2979ff, #3d5afe);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-input-section button:hover {
+  background: linear-gradient(90deg, #1e88e5, #303f9f);
+  transform: translateY(-2px);
+}
+
+/* Task List */
+.task-list {
+  margin-top: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.task-item span {
+  cursor: pointer;
+  flex: 1;
+  text-align: left;
+  font-size: 15px;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: #a5a5a5;
+}
+
+.task-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ff8a80;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  color: #ff5252;
+}
+
+/* No tasks */
+.no-tasks {
+  text-align: center;
+  color: #ccc;
+  font-style: italic;
+  margin-top: 30px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

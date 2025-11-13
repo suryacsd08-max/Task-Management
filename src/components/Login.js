@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import "./Login.css"; 
 
 const Login = () => {
   const [formData, setFormData] = useState({ username: "", password: "" });
   const [error, setError] = useState("");
+
+  const navigate=useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,9 +22,10 @@ const Login = () => {
     }
 
     if (formData.username === "surya" && formData.password === "1234") {
-      alert("✅ Login Successful!");
-    } else {
-      setError("❌ Invalid username or password");
+        localStorage.setItem("loggedIn", true); // ✅ store login info
+        navigate("/Dashboard"); // ✅ now redirect will work
+        } else {
+        setError("❌ Invalid username or password");
     }
   };
 

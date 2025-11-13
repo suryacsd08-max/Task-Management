@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import "./SignUp.css"; // Import the CSS file
 
 const SignUp = () => {
@@ -11,6 +11,7 @@ const SignUp = () => {
   });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const Navigate=useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -40,6 +41,10 @@ const SignUp = () => {
 
     setSuccess("✅ Account created successfully!");
     setFormData({ username: "", email: "", password: "", confirmPassword: "" });
+    
+    setTimeout(() => {
+        Navigate("/")
+    },1000);
   };
 
   return (
